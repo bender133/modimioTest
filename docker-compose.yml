@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  webapp:
+    container_name: diamond-union
+    build:
+      context: docker
+      dockerfile: ./Dockerfile
+    ports:
+      - "9909:80"
+    volumes:
+      - ./:/var/www/public
+    environment:
+      - APP_ENV=development
