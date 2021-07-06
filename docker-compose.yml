@@ -1,12 +1,12 @@
 version: "3.7"
 services:
   webapp:
-    container_name: diamond-union
+    container_name: modimio
     build:
       context: docker
       dockerfile: ./Dockerfile
     ports:
-      - "9909:80"
+      - "9910:80"
     volumes:
       - ./:/var/www/public
     environment:
