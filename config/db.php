@@ -2,7 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=host.docker.internal;dbname=modimio',
+//    'dsn' => 'mysql:host=host.docker.internal;dbname=modimio',
+    'dsn' => 'mysql:host=localhost;dbname=modimio',
     'username' => 'root',
     'password' => 'root',
     'charset' => 'utf8',
