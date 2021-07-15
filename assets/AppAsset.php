@@ -23,7 +23,8 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
-        'js/custom.js'
+        'js/custom.js',
+        'js/Chart.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',

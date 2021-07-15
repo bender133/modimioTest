@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8bf38b146062c0a5b687f152128ba4a",
+    "content-hash": "8616298a1bf074924e545ba0d1df131e",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -26,6 +26,21 @@
             "license": [
                 "MIT"
             ]
+        },
+        {
+            "name": "bower-asset/chart.js",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:chartjs/Chart.js.git",
+                "reference": "0d6fa55714cda8d2107451e4e5759bf9379a6710"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chartjs/Chart.js/zipball/0d6fa55714cda8d2107451e4e5759bf9379a6710",
+                "reference": "0d6fa55714cda8d2107451e4e5759bf9379a6710"
+            },
+            "type": "bower-asset"
         },
         {
             "name": "bower-asset/inputmask",
@@ -443,6 +458,57 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/master"
             },
             "time": "2020-06-29T00:56:53+00:00"
+        },
+        {
+            "name": "phpnt/yii2-chartjs",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpnt/yii2-chartjs.git",
+                "reference": "ce836c38180bc7a6509d3e96b668f7976058ed3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpnt/yii2-chartjs/zipball/ce836c38180bc7a6509d3e96b668f7976058ed3c",
+                "reference": "ce836c38180bc7a6509d3e96b668f7976058ed3c",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/chart.js": "*",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "phpnt\\chartJS\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "phpNT",
+                    "email": "phpnt@phpnt.com",
+                    "homepage": "http://phpnt.com"
+                }
+            ],
+            "description": "Yii2 chartjs",
+            "keywords": [
+                "Chart.js",
+                "chart js",
+                "chartjs",
+                "phpnt",
+                "yii2",
+                "yii2 chartjs"
+            ],
+            "support": {
+                "issues": "https://github.com/phpnt/yii2-chartjs/issues",
+                "source": "https://github.com/phpnt/yii2-chartjs"
+            },
+            "time": "2017-04-29T03:43:19+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5442,5 +5508,5 @@
         "php": ">=5.6.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
