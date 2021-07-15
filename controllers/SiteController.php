@@ -62,10 +62,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $model = Test::find()->andWhere(['id' => 1])->one();
 
         return $this->render('index', [
-            'model' => $model
         ]);
     }
 
