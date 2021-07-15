@@ -3,7 +3,6 @@
 
 namespace app\models;
 
-use UAParser\Parser;
 
 class Logs extends \yii\db\ActiveRecord
 {
@@ -11,5 +10,4 @@ class Logs extends \yii\db\ActiveRecord
     {
         return '{{logs}}';
     }
-
 }

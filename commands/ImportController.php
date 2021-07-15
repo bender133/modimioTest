@@ -4,7 +4,7 @@
 namespace app\commands;
 
 
-use phpDocumentor\Reflection\Types\Null_;
+use app\myHelpers\MyHelper;
 use UAParser\Parser;
 use app\models\Logs;
 use Yii;
@@ -36,7 +36,7 @@ class ImportController extends \yii\console\Controller
 
         copy($path, $processingPath);
         copy($processingPath, $lastProcessingPath);
-        $this->actionParseLog($path);
+        $this->actionParseLog($processingPath);
         unlink($processingPath);
         unlink($path);
 
@@ -61,7 +61,7 @@ class ImportController extends \yii\console\Controller
                 $model = new Logs();
 
                 if (empty($match) === false) {
-                    $date = str_replace('/', ' ', \app\commands\ImportController::str_replace_once(':', ' ', $match['date']));
+                    $date = str_replace('/', ' ', MyHelper::str_replace_once(':', ' ', $match['date']));
                     $dateObj = new \DateTime($date);
                     $model->ip = $match['ip'];
                     $model->date = $dateObj->format('Y-m-d H:i:s');
@@ -73,18 +73,12 @@ class ImportController extends \yii\console\Controller
                     $model->architecture = $result->os->architecture;
                     $model->browser = $result->ua->family;
                     $model->save();
-                    Console::updateProgress($iter, $total);
                     $iter++;
+                    Console::updateProgress($iter, $total);
                 }
             }
         }
         Console::endProgress();
-    }
-
-    public static function str_replace_once($search, $replace, $text)
-    {
-        $pos = strpos($text, $search);
-        return $pos !== false ? substr_replace($text, $replace, $pos, strlen($search)) : $text;
     }
 
 }
